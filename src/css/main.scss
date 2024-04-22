@@ -1,0 +1,43 @@
+@import "font";
+@import "ui-kit";
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    max-width: 1024px;
+    height: 774px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.modal {
+    width: 480px;
+    height: 459px;
+    border-radius: 12px;
+    background: #c2f5ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 158px;
+    left: 272px;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10px;
+    background: #000;
+    opacity: 0.5;
+}
+
+@import "change-level";
+@import "game-field";
+@import "final";

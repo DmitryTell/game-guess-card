@@ -1,0 +1,220 @@
+@font-face {
+  font-family: StratosSkyeng;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../public/fonts/stratosskyengweb-regular.woff) format("woff");
+}
+@font-face {
+  font-family: StratosSkyeng;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../public/fonts/stratosskyengweb-regular.woff2) format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: StratosSkyeng;
+  scrollbar-width: 0;
+  background: #004980;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+button {
+  width: 246px;
+  height: 50px;
+  background: #7ac100;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #fff;
+  transition: all 0.5s;
+}
+button:hover {
+  opacity: 0.5;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1024px;
+  height: 774px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.modal {
+  width: 480px;
+  height: 459px;
+  border-radius: 12px;
+  background: #c2f5ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 158px;
+  left: 272px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10px;
+  background: #000;
+  opacity: 0.5;
+}
+
+.change-level {
+  gap: 48px;
+}
+.change-level__title {
+  width: 208px;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 48px;
+  text-align: center;
+  color: #004980;
+}
+.change-level__level-box {
+  margin-bottom: 19px;
+  display: flex;
+  gap: 26px;
+}
+.change-level__level-box input[type=radio] {
+  display: none;
+}
+.change-level__level-box input[type=radio]:checked + label {
+  border: 3px solid #0080c1;
+}
+.change-level__level-box label {
+  width: 98px;
+  height: 98px;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  font-style: normal;
+  line-height: 72px;
+  color: #0080c1;
+}
+.change-level__button-box {
+  width: 246px;
+  height: 50px;
+}
+
+.game-field {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+.game-field .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game-field .header__timer {
+  display: flex;
+  align-items: end;
+}
+.game-field .header .timer__box {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.game-field .header .timer__text {
+  font-size: 16px;
+  line-height: 32px;
+}
+.game-field .header .timer__number, .game-field .header .timer__dote {
+  margin-top: -15px;
+  font-size: 64px;
+  line-height: 72px;
+}
+.game-field .header .timer__text, .game-field .header .timer__number, .game-field .header .timer__dote {
+  color: #fff;
+}
+.game-field .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.game-field .cards__card {
+  width: 95px;
+  height: 133px;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.game-field .cards .card__face {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.game-field .cards .card__top-block, .game-field .cards .card__bottom-block {
+  width: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.game-field .cards .card__top-block div, .game-field .cards .card__bottom-block div {
+  margin-top: -15px;
+  align-self: center;
+}
+.game-field .cards .card__center-block {
+  align-self: center;
+}
+.game-field .cards .card__bottom-block {
+  align-self: end;
+  transform: rotate(180deg);
+}
+.game-field .cards .card__rank {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.final__title {
+  margin-top: 9px;
+  margin-bottom: 28px;
+  font-size: 40px;
+  line-height: 48px;
+  color: #004980;
+}
+.final__text {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 32px;
+}
+.final__time {
+  margin-bottom: 40px;
+  font-size: 64px;
+  line-height: 72px;
+}/*# sourceMappingURL=main.css.map */

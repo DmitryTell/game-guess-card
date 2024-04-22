@@ -1,0 +1,96 @@
+.game-field {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__timer {
+            display: flex;
+            align-items: end;
+        }
+
+        .timer {
+            &__box {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+
+            &__text {
+                font-size: 16px;
+                line-height: 32px;
+            }
+
+            &__number,
+            &__dote {
+                margin-top: -15px;
+                font-size: 64px;
+                line-height: 72px;
+            }
+
+            &__text,
+            &__number,
+            &__dote {
+                color: #fff;
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        &__card {
+            width: 95px;
+            height: 133px;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .card {
+            &__face {
+                width: 100%;
+                height: 100%;
+                padding: 6px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &__top-block,
+            &__bottom-block {
+                width: 15px;
+                display: flex;
+                flex-direction: column;
+
+                & div {
+                    margin-top: -15px;
+                    align-self: center;
+                }
+            }
+
+            &__center-block {
+                align-self: center;
+            }
+
+            &__bottom-block {
+                align-self: end;
+                transform: rotate(180deg);
+            }
+
+            &__rank {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+    }
+}

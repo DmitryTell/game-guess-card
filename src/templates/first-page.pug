@@ -1,0 +1,8 @@
+.container 
+    .modal.change-level
+        h2.change-level__title Выбери сложность
+        .change-level__level-box
+            each level in store.levels
+                input(type="radio" name="radios" id=`radio-${level}`)
+                label(@click="click_to_level" for=`radio-${level}`)= level
+        button Старт

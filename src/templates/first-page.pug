@@ -5,4 +5,4 @@
             each level in store.levels
                 input(type="radio" name="radios" id=`radio-${level}`)
                 label(@click="click_to_level" for=`radio-${level}`)= level
-        button Старт
+        button(@click="click_to_start") Старт

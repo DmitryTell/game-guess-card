@@ -1,0 +1,16 @@
+each card in store.cards 
+    li.cards__card.card 
+        if card.isOpened 
+            .card__face
+                .card__top-block
+                    span.card__rank= card.rank
+                    div 
+                        img(src=`${card.suitImgSmall}` alt="Масть")
+                .card__center-block
+                    img(src=`${card.suitImg}` alt="Масть")
+                .card__bottom-block
+                    span.card__rank= card.rank
+                    div
+                        img(src=`${card.suitImgSmall}` alt="Масть")
+        else 
+            img(src="../../public/img/shirt.svg" alt="Рубашка")

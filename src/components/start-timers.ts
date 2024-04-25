@@ -41,7 +41,7 @@ export const startCountdown = () => {
             return;
         }
 
-        if (seconds < 1) {
+        if (seconds === 0) {
             clearInterval(countdownInterval);
 
             startGameTimer();

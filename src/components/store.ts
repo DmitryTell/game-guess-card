@@ -8,6 +8,7 @@ export const store: IStore = {
     minutes: addZeroBefore(0),
     seconds: addZeroBefore(5),
     isResetTimer: false,
+    previousCard: null,
     isFinal: false,
     isWon: null,
 };

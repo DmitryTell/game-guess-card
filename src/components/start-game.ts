@@ -1,6 +1,6 @@
 import { store } from './store';
 import { getNewDeck } from '../utils/get-new-deck';
-import { cards } from './cards';
+import { firstDeck, secondDeck } from './cards';
 import { renderApp } from '../render/render-app';
 import {
     startCountdown,
@@ -13,7 +13,7 @@ export const selectLevel = (event: MouseEvent) => {
 
 export const initStartGame = () => {
     if (store.currentLevel) {
-        store.cards = getNewDeck(cards, store);
+        store.cards = getNewDeck(firstDeck, secondDeck, store);
         store.cards.map((card) => {
             card.isOpened = true;
         });
@@ -27,6 +27,7 @@ export const initStartGame = () => {
 export const initRestartGame = () => {
     store.currentLevel = null;
     store.isResetTimer = true;
+    store.isFinal = false;
 
     renderApp(store, ['first-page']);
     restartTimer();

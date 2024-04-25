@@ -7,6 +7,7 @@ export interface IStore {
     minutes: string;
     seconds: string;
     isResetTimer: boolean;
+    previousCard: null | string;
     isFinal: boolean;
     isWon: null | boolean;
 }

@@ -3,9 +3,7 @@ import { ICard } from '../interface/card';
 
 const getNewRandomIndex = (max: number): number => Math.round(Math.random() * max);
 
-export const getNewDeck = (cards: ICard[], store: IStore): ICard[] => {
-    const firstDeck: ICard[] = [...cards];
-    const secondDeck: ICard[] = [...cards];
+export const getNewDeck = (firstDeck: ICard[], secondDeck: ICard[], store: IStore): ICard[] => {
     const result: ICard[] = [];
 
     for (let i = 0; i < store.currentLevel * 3; i++) {

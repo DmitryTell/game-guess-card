@@ -3,3 +3,11 @@
         .header__timer.timer#timer
         button(@click="click_to_restart") Начать заново
     ul.cards#cards
+    if store.isFinal 
+        .backdrop 
+        .modal.final 
+            img(src=`${store.isWon ? "../../public/img/Win.png" : "../../public/img/Lose.png"}` alt=`${store.isWon ? "Победа" : "Поражение"}`)
+            h2.final__title= store.isWon ? "Вы выиграли!" : "Вы проиграли!"
+            p.final__text Затраченное время:
+            p.final__time= `${store.minutes}.${store.seconds}`
+            button(@click="click_to_restart") Играть снова

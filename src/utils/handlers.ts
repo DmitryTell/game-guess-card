@@ -1,4 +1,8 @@
-import { selectLevel, initStartGame, initRestartGame } from '../components/start-game';
+import {
+    selectLevel,
+    initStartGame,
+    initRestartGame,
+} from '../components/start-game';
 
 interface IHandlers {
     [key: string]: (event: MouseEvent) => void;

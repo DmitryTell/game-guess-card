@@ -6,7 +6,7 @@ export const store: IStore = {
     currentLevel: null,
     cards: [],
     minutes: addZeroBefore(0),
-    seconds: addZeroBefore(5),
+    seconds: addZeroBefore(0),
     isResetTimer: false,
     previousCard: null,
     isFinal: false,

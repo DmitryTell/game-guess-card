@@ -33,7 +33,11 @@ const startGameTimer = () => {
 };
 
 export const startCountdown = () => {
-    let seconds = 5;
+    let seconds = 5 * store.currentLevel;
+
+    store.seconds = addZeroBefore(seconds);
+
+    renderApp(store, ['timer']);
 
     const countdownInterval = setInterval(() => {
         if (store.isResetTimer) {

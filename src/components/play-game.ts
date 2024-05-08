@@ -12,6 +12,8 @@ const finishGame = (status: boolean) => {
         store.isWon = false;
     }
 
+    store.previousCard = null;
+
     renderApp(store, ['game-page', 'timer', 'cards']);
 };
 
